@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(122, 118, 118));
+        }
+        .box{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgb(255, 255, 255, 0.6);
+            padding: 15px;
+            width: 25%;
+        }
+        legend{
+            border: 1px solid black;
+            position: center;
+            padding: 10px;
+            text-align: center;
+            background-color: rgb(90, 90, 90);
+            color: white;
+        }
+        fieldset{
+            border: 3px solid black;
+        }
+        .inputbox{
+            position: relative;
+            text-align: center;
+        }
+        .jooj{
+            background: none;
+            border: none;
+            border-bottom: 1px solid white;
+            outline: none;
+            font-size: 15px ;
+            width: 100%;
+            text-align: center;
+        }
+        #submit{
+            background-image: linear-gradient(to right, rgb(204, 202, 202), rgb(122, 118, 118));
+            width: 100%;
+            color: white;
+        }
+    </style>
+</head>
+<div class="container mt-5 mb-5">
+    <div class="row row-cols-auto justify-content-center g-5">
+        {{registroContent}} 
+    </div>
+</div>
+
+<body>    
+    <div class="box">
+        <form method="post" action="index.php?pg=registro&act=insert" name="Inserção de novos hardware">
+            <fieldset>
+                <legend><b>Formúlario de cadastro</b></legend>
+                <br><br>
+                <div class="inputbox">    
+                    <label for="tipoprodutos" id="tipoprodutos" >  Informe o novo produto!<br>
+                    <input type="text" id="tipoprodutos" name="tipoprodutos" value="" class="jooj" required><br>
+                </div>
+                <br>
+                <div class="inputbox">  
+                    <label for="precoprodutos" id="precoprodutos" >  Informe o valor do produto!<br>
+                    <input type="real" id="precoprodutos" name="precoprodutos" value="" class="jooj" required><br>
+                </div>
+                <br>
+                <div class="inputbox">  
+                    <label for="quantidadeprodutos" id="quantidadeprodutos" >  Informe a quantidade em estoque!<br>
+                    <input type="number" id="quantidadeprodutos" name="quantidadeprodutos" value="" class="jooj" required><br>
+                </div>
+                <br>
+                <input type="submit" class="jooj" id="submit"><br>
+            </fieldset>
+        </form>
+    </div>
+</body>
